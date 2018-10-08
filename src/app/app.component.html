@@ -2,16 +2,16 @@
 <mat-toolbar color="warn" class="mat-elevation-z6" style="background-color: #e21607">
     <span>Convertidor de Mp3</span>
 </mat-toolbar>
-<form class="example-form" style="padding-top: 20px">
+<form class="example-form" style="padding-top: 20px" >
   
-    <mat-form-field class="example-full-width" style="width:90%;">
-      <textarea matInput placeholder="Ingrese los link a descargar" style="height: 500px;"></textarea>
+    <mat-form-field class="example-full-width" style="width:90%;" >
+      <textarea matInput placeholder="Ingrese los link a descargar" style="height: 500px;" name="texto" [(ngModel)]="texto"></textarea>
     </mat-form-field>
   </form>
   <div style="text-align: center">
     <button mat-flat-button style="font-size: 25px; padding: 15px; border-radius: 10px; background-color: #e21607"> Convertir </button>
   </div>
-  
+
 
 
 
