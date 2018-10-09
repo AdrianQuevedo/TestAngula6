@@ -1,16 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="warn" class="mat-elevation-z6" style="background-color: #e21607">
+<mat-toolbar color="primary" class="mat-elevation-z6" >
     <span>Convertidor de Mp3</span>
 </mat-toolbar>
-<form class="example-form" style="padding-top: 20px" >
+<form class="example-form" style="padding-top: 20px; padding-left: 20px" >
   
-    <mat-form-field class="example-full-width" style="width:90%;" >
-      <textarea matInput placeholder="Ingrese los link a descargar" style="height: 500px;" name="texto" [(ngModel)]="texto"></textarea>
+    <mat-form-field class="example-full-width" style="width:35%;" >
+      <input matInput [(ngModel)]="texto" name="texto" placeholder="Link">
     </mat-form-field>
-  </form>
-  <div style="text-align: center">
+    <button mat-icon-button>
+      <mat-icon aria-label="label" color="primary" title="Agregar" (click)="agregarLink()">done</mat-icon>
+    </button>
+</form>
+<mat-list *ngIf="visible">
+  <h3 mat-subheader>Links para la descarga</h3>
+  <mat-list-item *ngFor="let link of links">
+    <mat-icon mat-list-icon>link</mat-icon>
+    <h4 mat-line>{{link}}</h4>
+    <button mat-icon-button>
+      <mat-icon aria-label="label" color="primary" title="Borrar" (click)="eliminarLink(link)">delete</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
+  <div style="text-align: center; padding-top: 20px">
     <button mat-flat-button style="font-size: 25px; padding: 15px; border-radius: 10px; background-color: #e21607"> Convertir </button>
   </div>
+  
 
 
 
