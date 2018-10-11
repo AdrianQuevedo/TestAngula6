@@ -39,7 +39,7 @@ export class AppComponent {
     }
   }
 
-  convertir(): void {
-    
-  }
+  // convertir(): void {
+    //
+  // }
 }
